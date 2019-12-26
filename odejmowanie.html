@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
+    <title>Zadania</title>
+</head>
+<body>
+    <header><a href="matematyka.php" style="color:#FFFFFF;">Zadania z odejmowania</a></header>
+    <br>
+    <article id="zadanko">
+    <script>
+        var i=0;
+        var pkt=0;
+        do
+        {
+            var a=Math.floor(Math.random() * 101);
+            var b=Math.floor(Math.random() * 101);
+            if((a-b)>100 || b>a )
+                {
+                    do
+                    {
+                        var a=Math.floor(Math.random() * 101);
+                        var b=Math.floor(Math.random() * 101);
+                    }while((a-b)>100 && a>b )
+                }
+            i++;
+            var c=a-b;
+            alert("Zadanie "+i)
+            var d=prompt(a+" - "+b);
+                if(c==d)
+                {
+                    document.write("<article id='podpkt'><article id='zad'> Zadanie "+i+"</article>  <article id='row'>"+a+" - "+b+" = "+c+"</article> "); // jeśli dobrze to na zielono i ptaszek a jak zle to na czerwono i X
+                    document.write("<article id='ODPok'>Twoja odpowiedź   "+d+" <img src='yes.png' style='float:right;' ><br><br></article></article><br>");
+                    pkt++; 
+                }
+                else
+                {
+                    document.write("<article id='podpkt'><article id='zad'> Zadanie "+i+"</article>  <article id='row'>"+a+" - "+b+" = "+c+"</article> "); // jeśli dobrze to na zielono i ptaszek a jak zle to na czerwono i X
+                    document.write("<article id='ODPbd'>Twoja odpowiedź "+d+" <img src='no.png' style='float:right;'><br><br></article></article><br>"); 
+                }  
+        }while(i!=10)
+        document.write("<article id='wynik'> Uzyskałeś "+pkt+" na 10 punktów <br>");
+                    switch(pkt)
+                    {
+                        case 0:
+                        {
+                            document.write("Bardzo słabo, ucz się");
+                            break;
+                        }
+                        case 1:
+                        {
+                            document.write("Bardzo słabo, ucz się");
+                                document.write("<img src='nstar.png' style='float:right;'>")
+                            break;
+                        }
+                        case 2:
+                            {
+                                document.write("Bardzo słabo, ucz się");
+                                    document.write("<img src='nstar.png' style='float:right;'>")
+                                    document.write("<img src='nstar.png' style='float:right;'>")
+                                break;
+                            }
+                        case 3:
+                        {
+                            document.write("Bardzo słabo, ucz się");
+                                document.write("<img src='nstar.png' style='float:right;'>")
+                                document.write("<img src='nstar.png' style='float:right;'>")
+                                document.write("<img src='nstar.png' style='float:right;'>")
+                        break;
+                        }
+                        case 4:
+                            {
+                                document.write("Słabo, poucz się trochę");
+                                    document.write("<img src='nstar.png' style='float:right;'>")
+                                    document.write("<img src='nstar.png' style='float:right;'>")
+                                    document.write("<img src='nstar.png' style='float:right;'>")
+                                    document.write("<img src='nstar.png' style='float:right;'>")
+                                break; 
+                            }
+                        case 5:
+                        {
+                            document.write("Słabo, poucz się trochę");
+                                document.write("<img src='nstar.png' style='float:right;'>")
+                                document.write("<img src='nstar.png' style='float:right;'>")
+                                document.write("<img src='nstar.png' style='float:right;'>")
+                                document.write("<img src='nstar.png' style='float:right;'>")
+                                document.write("<img src='nstar.png' style='float:right;'>")
+                                break;                             
+                        }
+                        case 6:
+                            {
+                                document.write("Nie jest dobrze,ale nie jest źle");
+                                    document.write("<img src='nstar.png' style='float:right;'>")
+                                    document.write("<img src='nstar.png' style='float:right;'>")
+                                    document.write("<img src='nstar.png' style='float:right;'>")
+                                    document.write("<img src='nstar.png' style='float:right;'>")
+                                    document.write("<img src='nstar.png' style='float:right;'>")
+                                    document.write("<img src='nstar.png' style='float:right;'>")
+                                break; 
+                            }
+                        case 7:
+                        {       document.write("Nie jest dobrze,ale nie jest źle");
+                                    document.write("<img src='nstar.png' style='float:right;'>")
+                                    document.write("<img src='nstar.png' style='float:right;'>")
+                                    document.write("<img src='nstar.png' style='float:right;'>")
+                                    document.write("<img src='nstar.png' style='float:right;'>")
+                                    document.write("<img src='nstar.png' style='float:right;'>")
+                                    document.write("<img src='nstar.png' style='float:right;'>")
+                                    document.write("<img src='nstar.png' style='float:right;'>")
+                                break; 
+                        }
+                        case 8:
+                            {
+                                document.write("Całkiem dobrze");
+                                    document.write("<img src='nstar.png' style='float:right;'>")
+                                    document.write("<img src='nstar.png' style='float:right;'>")
+                                    document.write("<img src='nstar.png' style='float:right;'>")
+                                    document.write("<img src='nstar.png' style='float:right;'>")
+                                    document.write("<img src='nstar.png' style='float:right;'>")
+                                    document.write("<img src='nstar.png' style='float:right;'>")
+                                    document.write("<img src='nstar.png' style='float:right;'>")
+                                    document.write("<img src='nstar.png' style='float:right;'>")
+                                break; 
+                            }
+                        case 9:
+                        {
+                            document.write("Wspaniale !");
+                                    document.write("<img src='nstar.png' style='float:right;'>")
+                                    document.write("<img src='nstar.png' style='float:right;'>")
+                                    document.write("<img src='nstar.png' style='float:right;'>")
+                                    document.write("<img src='nstar.png' style='float:right;'>")
+                                    document.write("<img src='nstar.png' style='float:right;'>")
+                                    document.write("<img src='nstar.png' style='float:right;'>")
+                                    document.write("<img src='nstar.png' style='float:right;'>")
+                                    document.write("<img src='nstar.png' style='float:right;'>")
+                                    document.write("<img src='nstar.png' style='float:right;'>")
+                            break;  
+                        }
+                        case 10:
+                            {
+                                document.write("Wspaniale !");
+                                    document.write("<img src='nstar.png' style='float:right;'>")
+                                    document.write("<img src='nstar.png' style='float:right;'>")
+                                    document.write("<img src='nstar.png' style='float:right;'>")
+                                    document.write("<img src='nstar.png' style='float:right;'>")
+                                    document.write("<img src='nstar.png' style='float:right;'>")
+                                    document.write("<img src='nstar.png' style='float:right;'>")
+                                    document.write("<img src='nstar.png' style='float:right;'>")
+                                    document.write("<img src='nstar.png' style='float:right;'>")
+                                    document.write("<img src='nstar.png' style='float:right;'>")
+                                    document.write("<img src='nstar.png' style='float:right;'>")
+                                break; 
+                            }
+                    }
+                    document.write("</article>") 
+    </script>
+    </article>
+    <div>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+</article>
+</body>
+</html>
