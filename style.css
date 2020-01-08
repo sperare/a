@@ -95,5 +95,5 @@ a
     width:33%;
     background-color:#757575;
     list-style: none;
-    display:inline-block;
+    float:left;
 }
