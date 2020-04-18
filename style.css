@@ -96,4 +96,9 @@ a
     background-color:#757575;
     list-style: none;
     float:left;
+    height:100%;
+}
+#box
+{
+    height:80%;
 }

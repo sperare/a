@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="utf-8">
+	<title>PESEL encoder</title>
+</head>
+<body>
+<script>
+	var pesel=prompt("Podaj pesel"); 
+	var rok="";
+	var num="";
+	var stu="";
+	var dzi="";
+    for(var k=0;k<2;k++)
+    {
+    	var rok=rok+(pesel.charAt(k));
+	}
+	for(var k=2;k<4;k++)
+    {
+    	var stu=stu+(pesel.charAt(k));
+	}
+	for(var k=4;k<6;k++)
+    {
+    	var dzi=dzi+(pesel.charAt(k));
+	}
+	for(var k=6;k<10;k++)
+    {
+    	var num=num+(pesel.charAt(k));
+	}
+
+	var sex=pesel.charAt(9);
+	var kontr=pesel.charAt(10);
+
+    var vali=((pesel.charAt(0))*9)+((pesel.charAt(1))*7)+((pesel.charAt(2))*3)+((pesel.charAt(3))*1)+((pesel.charAt(4))*9)+((pesel.charAt(5))*7)+((pesel.charAt(6))*3)+((pesel.charAt(7))*1)+((pesel.charAt(8))*9)+((pesel.charAt(9))*7);
+
+	var cyfr=vali%10;
+
+	if(pesel.length==11)
+	{
+		if(kontr==cyfr)
+		{
+			if(stu.charAt(0)==8 || stu.charAt(0)==9)
+			{
+				var rok1="18"+rok;
+				switch(stu)
+				{
+					case "81":
+					{
+						var mies="Styczeń";
+						break;
+					}
+					case "82":
+					{
+						var mies="Luty";
+						break;
+					}
+					case "83":
+					{
+						var mies="Marzec";
+						break;
+					}
+					case "84":
+					{
+						var mies="Kwiecień";
+						break;
+					}
+					case "85":
+					{
+						var mies="Maj";
+						break;
+					}
+					case "86":
+					{
+						var mies="Czerwiec";
+						break;
+					}
+					case "87":
+					{
+						var mies="Lipiec";
+						break;
+					}
+					case "88":
+					{
+						var mies="Sierpień";
+						break;
+					}
+					case "89":
+					{
+						var mies="Wrzesień";
+						break;
+					}
+					case "90":
+					{
+						var mies="Październik";
+						break;
+					}
+					case "91":
+					{
+						var mies="Listopad";
+						break;
+					}
+					case "92":
+					{
+						var mies="Grudzień";
+						break;
+					}
+					default:
+					{
+						document.write("Niepoprawny zapis")
+						break;
+					}
+				}
+			}
+			else if(stu.charAt(0)==0 || stu.charAt(0)==1)
+			{
+				var rok1="19"+rok;
+				switch(stu)
+				{
+					case "01":
+					{
+						var mies="Styczeń";
+						break;
+					}
+					case "02":
+					{
+						var mies="Luty";
+						break;
+					}
+					case "03":
+					{
+						var mies="Marzec";
+						break;
+					}
+					case "04":
+					{
+						var mies="Kwiecień";
+						break;
+					}
+					case "05":
+					{
+						var mies="Maj";
+						break;
+					}
+					case "06":
+					{
+						var mies="Czerwiec";
+						break;
+					}
+					case "07":
+					{
+						var mies="Lipiec";
+						break;
+					}
+					case "08":
+					{
+						var mies="Sierpień";
+						break;
+					}
+					case "09":
+					{
+						var mies="Wrzesień";
+						break;
+					}
+					case "10":
+					{
+						var mies="Październik";
+						break;
+					}
+					case "11":
+					{
+						var mies="Listopad";
+						break;
+					}
+					case "12":
+					{
+						var mies="Grudzień";
+						break;
+					}
+					default:
+					{
+						document.write("Niepoprawny zapis")
+						break;
+					} 
+				}
+			}
+			else if(stu.charAt(0)==2 || stu.charAt(0)==3)
+			{
+				var rok1="20"+rok;
+				switch(stu)
+				{
+					case "21":
+					{
+						var mies="Styczeń";
+						break;
+					}
+					case "22":
+					{
+						var mies="Luty";
+						break;
+					}
+					case "23":
+					{
+						var mies="Marzec";
+						break;
+					}
+					case "24":
+					{
+						var mies="Kwiecień";
+						break;
+					}
+					case "25":
+					{
+						var mies="Maj";
+						break;
+					}
+					case "26":
+					{
+						var mies="Czerwiec";
+						break;
+					}
+					case "27":
+					{
+						var mies="Lipiec";
+						break;
+					}
+					case "28":
+					{
+						var mies="Sierpień";
+						break;
+					}
+					case "29":
+					{
+						var mies="Wrzesień";
+						break;
+					}
+					case "30":
+					{
+						var mies="Październik";
+						break;
+					}
+					case "31":
+					{
+						var mies="Listopad";
+						break;
+					}
+					case "32":
+					{
+						var mies="Grudzień";
+						break;
+					}
+					default:
+					{
+						document.write("Niepoprawny zapis")
+						break;
+					}
+				}
+			}
+
+			if(sex%2!=0)
+			{
+				var plec="męska";
+			}
+			else
+			{
+				var plec="żeńska";
+			}
+
+			document.write("<h1>PESEL encoder</h1><br>Data urodzenia: "+dzi+" "+mies+" "+rok1+"<br>"+"Płeć "+plec)
+		}
+		else
+		{
+			document.write("Niepoprawna cyfra kontrolna")
+		}
+	}
+	else
+	{
+		document.write("Nie poprawna długość numeru PESEL")
+	}
+</script>
+</body>
+</html>
