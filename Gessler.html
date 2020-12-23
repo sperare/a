@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="utf-8">
+	<title>Kuchenne rewolucje - generator</title>
+</head>
+<body>
+<script>
+    function Randomizer()
+    {
+        var sezon = Math.floor((Math.random() * 21) + 1);
+        switch(sezon)
+        {
+            case 1:
+            {
+                var odcinki = 8;
+                var cyfra=1979-1;
+                break;
+            }
+            case 2:
+            {
+                var cyfra=2158-1;
+                var odcinki = 14;
+                break;
+            }
+            case 4:
+            {
+                var cyfra=3095;
+                var odcinki = 14;
+                break;
+            }
+            case 5:
+            {
+                var cyfra=10316;
+                var odcinki = 14;
+                break;
+            }
+            case 13:
+            {
+                var cyfra=58751;
+                var odcinki = 14;
+                break;
+            }
+            case 15:
+            {
+                var cyfra=69813;
+                var odcinki = 14;
+                break;
+            }
+            case 17:
+            {
+                var cyfra=95155;
+                var odcinki = 14;
+                break;
+            }
+            case 18:
+            {
+                var cyfra=113041;
+                var odcinki = 14;
+                break;
+            }
+            case 3:
+            {
+                var odcinki = 12;
+                var cyfra = 2400;
+                break;
+            }
+            case 6:
+            {
+                var cyfra=14755;
+                var odcinki = 13;
+                break;
+            }
+            case 9:
+            {
+                var cyfra=27028;
+                var odcinki = 13;
+                break;
+            }
+            case 10:
+            {
+                var cyfra=32135;
+                var odcinki = 13;
+                break;
+            }
+            case 11:
+            {
+                var cyfra=36245;
+                var odcinki = 13;
+                break;
+            }
+            case 16:
+            {
+                var cyfra=79296-1;
+                var odcinki = 13;
+                break;
+            }
+            case 19:
+            {
+                var cyfra=129743-1;
+                var odcinki = 13;
+                break;
+            }
+            case 20:
+            {
+                var cyfra=149874-1;
+                var odcinki = 13;
+                break;
+            }
+            case 7:
+            {
+                var cyfra=17913;
+                var odcinki = 15;
+                break;
+            }
+            case 8:
+            {
+                var cyfra=21796;
+                var odcinki = 15;
+                break;
+            }
+            case 12:
+            {
+                var cyfra=53179;
+                var odcinki = 15;
+                break;
+            }
+            case 14:
+            {
+                var cyfra=64993;
+                var odcinki = 15;
+                break;
+            }
+            case 21:
+            {
+                var cyfra=167555;
+                var odcinki = 17;
+                break;
+            }
+        }
+        odcinki = Math.floor((Math.random() * odcinki) + 1);
+        document.write("Wylosowano sezon "+sezon+" odcinek "+odcinki+"<br>")
+        if(sezon==2 && odcinki==2)
+        {
+            document.write("Takiego odcinka nie ma na Player.pl :(");
+        }
+        else if(sezon==8 && odcinki==3)
+        {
+            document.write("Takiego odcinka nie ma na Player.pl :(");
+        }
+        else
+        {   
+            var odcinkix=odcinki;   //wartosc nie zmieniona przez ify
+
+            //Problemy z numeracją kilku odcinków w kilku sezonach
+            if(sezon==13 && odcinki>2 && odcinki<6)
+            {
+                odcinki=odcinki-2;
+                cyfra=58827;
+            }
+            if(sezon==13 && odcinki>6)
+            {
+                odcinki=odcinki-6;
+                cyfra=60222;
+            }
+            if(sezon==21 && odcinki>=14)
+            {
+                odcinki=odcinki-14;
+                cyfra=190980;
+            }
+            if(sezon==10 && odcinki>=4)
+            {
+                odcinki=odcinki-4;
+                cyfra=33150;
+            }
+            
+            //Sezon 8
+            if(sezon==8 && odcinki>=2 && odcinki<5)
+            {
+                odcinki=odcinki-2;
+                cyfra=22209;  
+            }
+            if(sezon==8 && odcinki>=5 && odcinki<8)
+            {
+                odcinki=odcinki-5;
+                cyfra=22728;  
+            }
+            if(sezon==8 && odcinki>=8 && odcinki<10)
+            {
+                odcinki=odcinki-8;
+                cyfra=23327;  
+            }
+            if(sezon==8 && odcinki>=10 && odcinki<13)
+            {
+                odcinki=odcinki-10;
+                cyfra=23870;  
+            }
+            if(sezon==8 && odcinki>=13)
+            {
+                odcinki=odcinki-13;
+                cyfra=24441;  
+            }
+            
+            //Sezon 13
+            if(sezon==13 && odcinki>=3 && odcinki<7)
+            {
+                odcinki=odcinki-3;
+                cyfra=58827;  
+            }
+            if(sezon==13 && odcinki>=7)
+            {
+                odcinki=odcinki-3;
+                cyfra=60222;  
+            }
+                        
+
+            //Przystosowywanie cyfry sezonu i odcinka do formatu linku
+            if(sezon<10)
+            {
+                sezon="0"+sezon;
+            }
+            if(odcinkix<10)
+            {
+                odcinkix="0"+odcinkix;
+            }
+            if(odcinkix>1)
+            {
+                cyfra=cyfra+odcinki;
+            }
+
+            //Sezon 11
+            if(sezon==11 && odcinki==2)
+            {
+                cyfra=37228;  
+            }
+            if(sezon==11 && odcinki==3)
+            {
+                cyfra=37466;  
+            }
+            if(sezon==11 && odcinki==4)
+            {
+                cyfra=37604;  
+            }
+            if(sezon==11 && odcinki==5)
+            {
+                cyfra=37972;  
+            }
+            if(sezon==11 && odcinki==6)
+            {
+                cyfra=38120;  
+            }
+            if(sezon==11 && odcinki==7)
+            {
+                cyfra=49942;  
+            }
+            if(sezon==11 && odcinki==8)
+            {
+                cyfra=50131;  
+            }
+            if(sezon==11 && odcinki==9)
+            {
+                cyfra=50414;  
+            }
+            if(sezon==11 && odcinki==10)
+            {
+                cyfra=50634;  
+            }
+            if(sezon==11 && odcinki==11)
+            {
+                cyfra=50721;  
+            }
+            if(sezon==11 && odcinki==12)
+            {
+                cyfra=50722;  
+            }
+            if(sezon==11 && odcinki==13)
+            {
+                cyfra=50723;  
+            }
+
+            //Sezon 7 17913
+            if(sezon==7 && odcinki==3)
+            {
+                cyfra=18204;  
+            }
+            if(sezon==7 && odcinki==4)
+            {
+                cyfra=18748;  
+            }
+            if(sezon==7 && odcinki==5)
+            {
+                cyfra=18913;  
+            }
+            if(sezon==7 && odcinki==6)
+            {
+                cyfra=18976;  
+            }
+            if(sezon==7 && odcinki==7)
+            {
+                cyfra=18977;  
+            }
+            if(sezon==7 && odcinki==8)
+            {
+                cyfra=19370;  
+            }
+            if(sezon==7 && odcinki==9)
+            {
+                cyfra=19371;  
+            }
+            if(sezon==7 && odcinki==10)
+            {
+                cyfra=19800;  
+            }
+            if(sezon==7 && odcinki==11)
+            {
+                cyfra=19801;  
+            }
+            if(sezon==7 && odcinki==12)
+            {
+                cyfra=20209;  
+            }
+            if(sezon==7 && odcinki==13)
+            {
+                cyfra=20210;  
+            }
+            if(sezon==7 && odcinki==14)
+            {
+                cyfra=20211;  
+            }
+            if(sezon==7 && odcinki==15)
+            {
+                cyfra=20212;  
+            }
+
+
+            //Problemy z sezonem 10
+            if(sezon==10 && odcinki==2)
+            {
+                cyfra=32393;
+            }
+            if(sezon==10 && odcinki==3)
+            {
+                cyfra=32798;
+            }
+            if(sezon==10 && odcinki==7)
+            {
+                cyfra=33262;
+            }
+            if(sezon==10 && odcinki==8)
+            {
+                cyfra=33897;
+            }
+            if(sezon==10 && odcinki==9)
+            {
+                cyfra=34157;
+            }
+            if(sezon==10 && odcinki==10)
+            {
+                cyfra=34378;
+            }
+            if(sezon==10 && odcinki==11)
+            {
+                cyfra=34595;
+            }
+            if(sezon==10 && odcinki==12)
+            {
+                cyfra=34688;
+            }
+            if(sezon==10 && odcinki==13)
+            {
+                cyfra=34916;
+            }
+            //Sezon 15 ostatni odcinek
+            if(sezon==12 && odcinki==15)
+            {
+                cyfra=57230;
+            }
+            
+            //Sezon 9
+            if(sezon==9 && odcinki==2)
+            {
+                cyfra=27680;
+            }
+            if(sezon==9 && odcinki==3)
+            {
+                cyfra=28057;
+            }
+            if(sezon==9 && odcinki==4)
+            {
+                cyfra=28058;
+            }
+            if(sezon==9 && odcinki==5)
+            {
+                cyfra=28059;
+            }
+            if(sezon==9 && odcinki==6)
+            {
+                cyfra=28668;
+            }
+            if(sezon==9 && odcinki==7)
+            {
+                cyfra=28669;
+            }
+            if(sezon==9 && odcinki==8)
+            {
+                cyfra=28670;
+            }
+            if(sezon==9 && odcinki==9)
+            {
+                cyfra=29205;
+            }
+            if(sezon==9 && odcinki==10)
+            {
+                cyfra=29367;
+            }
+            if(sezon==9 && odcinki==11)
+            {
+                cyfra=29706;
+            }
+            if(sezon==9 && odcinki==12)
+            {
+                cyfra=29816;
+            }
+            if(sezon==9 && odcinki==12)
+            {
+                cyfra=30033;
+            }
+            
+            var link = "https://player.pl/programy-online/kuchenne-rewolucje-odcinki,114/odcinek-"+odcinkix+",S"+sezon+"E"+odcinki+","+cyfra;
+            document.write(link+"<br>")
+            document.write('<a href="' + link + '" target="_blank">Link do Player.pl</a>')
+        }
+    }
+</script>
+<button onclick="Randomizer()">Losuj!</button>
+</body>
+</html>
