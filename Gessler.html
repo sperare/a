@@ -20,17 +20,20 @@
             {
                 var odcinki = 8;
                 var cyfra=1979-1;
+                var zz=true;
                 break;
             }
             case 2:
             {
                 var cyfra=2158-1;
+                var zz=true;
                 var odcinki = 14;
                 break;
             }
             case 4:
             {
                 var cyfra=3095-1;
+                var zz=true;
                 var odcinki = 14;
                 break;
             }
@@ -55,12 +58,14 @@
             case 17:
             {
                 var cyfra=95155-1;
+                var zz=true;
                 var odcinki = 14;
                 break;
             }
             case 18:
             {
                 var cyfra=113041-1;
+                var zz=true;
                 var odcinki = 14;
                 break;
             }
@@ -68,6 +73,7 @@
             {
                 var odcinki = 12;
                 var cyfra = 2400-1;
+                var zz=true;
                 break;
             }
             case 6:
@@ -97,18 +103,21 @@
             case 16:
             {
                 var cyfra=79296-1;
+                var zz=true;
                 var odcinki = 13;
                 break;
             }
             case 19:
             {
                 var cyfra=129743-1;
+                var zz=true;
                 var odcinki = 13;
                 break;
             }
             case 20:
             {
                 var cyfra=149874-1;
+                var zz=true;
                 var odcinki = 13;
                 break;
             }
@@ -133,17 +142,19 @@
             case 14:
             {
                 var cyfra=64993-1;
+                var zz=true;
                 var odcinki = 15;
                 break;
             }
             case 21:
             {
                 var cyfra=167555-1;
+                var zz=true;
                 var odcinki = 17;
                 break;
             }
         }
-        odcinki = Math.floor((Math.random() * odcinki) + 1);
+        odcinki = Math.floor((Math.random() *odcinki) + 1);
         document.write("Wylosowano sezon "+sezon+" odcinek "+odcinki+"<br>")
         if(sezon==2 && odcinki==2)
         {
@@ -517,8 +528,12 @@
                 odcinkix="0"+odcinkix;
             }
 
+            if(odcinki==1 && zz==true)
+            {
+                cyfra=cyfra+1;
+            }
             var link = "https://player.pl/programy-online/kuchenne-rewolucje-odcinki,114/odcinek-"+odcinkix+",S"+sezon+"E"+odcinkix+","+cyfra;
-            document.write(link+"<br>")
+            //document.write(link+"<br>")
             document.write('<a href="' + link + '" target="_blank">Link do Player.pl</a>'+"<br>")
             document.write('<button onclick="Randu()">Losuj jeszcze raz!</button>')
         }
