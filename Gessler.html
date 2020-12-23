@@ -2,10 +2,13 @@
 <html lang="pl">
 <head>
 	<meta charset="utf-8">
-	<title>Kuchenne rewolucje - generator</title>
+    <title>Kuchenne rewolucje - generator</title>
+    <link rel="stylesheet" href="magda.css">
 </head>
 <body>
+    <div id="container">
 <script>
+    document.getElementById('container').style.backgroundColor = 'url("gessler.jpg")';
     function Randu()
     {
         document.body.innerHTML = '';
@@ -135,8 +138,9 @@
             }
             case 12:
             {
-                var cyfra=53179;
+                var cyfra=53179-1;
                 var odcinki = 15;
+                var zz=true;
                 break;
             }
             case 14:
@@ -256,7 +260,7 @@
             if(sezon==5 && odcinki>=3 && odcinki<8)
             {
                 odcinki=odcinki-3;
-                cyfra=10909;
+                cyfra=10909-1;
             }
             if(sezon==5 && odcinki>=8)
             {
@@ -535,10 +539,11 @@
             var link = "https://player.pl/programy-online/kuchenne-rewolucje-odcinki,114/odcinek-"+odcinkix+",S"+sezon+"E"+odcinkix+","+cyfra;
             //document.write(link+"<br>")
             document.write('<a href="' + link + '" target="_blank">Link do Player.pl</a>'+"<br>")
-            document.write('<button onclick="Randu()">Losuj jeszcze raz!</button>')
+            document.write('<button onclick="Randu()" id="b">Losuj jeszcze raz!</button>')
         }
     }
 </script>
-<button onclick="Randomizer()">Losuj!</button>
+<button onclick="Randomizer()" id="a">Losuj!</button>
+</div>
 </body>
 </html>
