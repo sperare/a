@@ -98,16 +98,13 @@ a
     color:#212121;
     padding:1%;
 }
-#home
+.home
 {
     width:33.3%;
     background-color:#CFD8DC;
     list-style: none;
     float:left;
     height:600px;
-    border:0.2px;
-    border-style: solid;
-    border-color:#212121;
     border-top:none;
 }
 
